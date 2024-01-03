@@ -17,7 +17,9 @@ int main(int argc, char **argv)
 
 	primary_socket = socket(AF_INET, SOCK_STREAM, 0);
 	int likes_sockets[10];
-	
+	for (int i = 0; i < 10; i++) {
+		likes_sockets[i] = 0;
+	}
 	if (primary_socket == -1) {
 		perror("Socket creation failed");
 		exit(1);
